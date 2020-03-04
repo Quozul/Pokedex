@@ -1,2 +1,0 @@
-# Pokedex
-School Project
