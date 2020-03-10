@@ -1,4 +1,3 @@
-<?php include('includes/config.php'); ?>
 <!doctype html>
 <html>
 
@@ -10,7 +9,10 @@
     include('includes/header.php');
     ?>
     <main>
-        <p>Acceuil</p>
+        <?php
+        include('includes/signUp.php');
+        include('includes/signIn.php');
+        ?>
     </main>
     <?php
     include('includes/footer.php');
