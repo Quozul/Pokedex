@@ -7,7 +7,7 @@
 <body>
 
     <?php
-    include('includes/header.php');
+    include('header.php');
     ?>
     <main>
         <p>Acceuil</p>
