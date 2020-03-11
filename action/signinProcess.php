@@ -1,9 +1,8 @@
 <?php
 require('../includes/config.php');
-require('config.php'); 
     $pseudo = htmlspecialchars($_POST['pseudo']);
     $password = hash('sha256', $_POST['password']);
-    $q = 'SELECT id FROM users WHERE pseudo = ? AND password = ?';
+    $q = 'SELECT id FROM user WHERE pseudo = ? AND password = ?';
     $req = $bdd->prepare($q);
     $req->execute([$pseudo, $password]);
     $results = $req->fetchAll();
