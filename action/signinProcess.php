@@ -7,12 +7,12 @@ require('../includes/config.php');
     $req->execute([$pseudo, $password]);
     $results = $req->fetchAll();
     if(count($result) == 0) {
-        header('location:signin.php?msg=Identifiants incorrects');
+        header('location:/index.php?msg=Identifiants incorrects');
         exit;
     } else {
         session_start();
         $_SESSION['pseudo'] = $pseudo;
-        header('location:index.php');
+        header('location:/index.php');
         exit;
     }
 ?>

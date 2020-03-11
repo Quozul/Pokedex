@@ -1,4 +1,4 @@
-<form action="action/signUpProcess.php" method="post" enctype="multipart/form-data" >
+<form action="/action/signUpProcess.php" method="post" enctype="multipart/form-data" >
     <h1>Pseudo :</h1><br><input type="text" name="pseudo" placeholder="Votre pseudo"><br>
     <h1>confirmation Pseudo :</h1><br><input type="text" name="pseudo2" placeholder="Votre pseudo"><br>
     <h1>email :</h1><br><input type="email" name="email" placeholder="email"><br>

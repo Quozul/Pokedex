@@ -12,27 +12,27 @@ echo $_POST['password2'] . ' ';
 //chek is the input was set
 //check if the fomr was well complet
 if(!isset($_POST['pseudo'])||empty($_POST['pseudo'])) {
-    header('location: index.php?msg=vous devez mettre un pseudo');
+    header('location: /index.php?msg=vous devez mettre un pseudo');
     exit;
 }
 if($_POST['pseudo'] != $_POST['pseudo2']) {
-    header('location: index.php?msg=les pseudos ne correspondent pas');
+    header('location: /index.php?msg=les pseudos ne correspondent pas');
     exit;
 }
 if(!isset($_POST['email'])||empty($_POST['email'])) {
-    header('location: index.php?msg=vous devez mettre un email');
+    header('location: /index.php?msg=vous devez mettre un email');
     exit;
 }
 if($_POST['email'] != $_POST['email2']) {
-    header('location: index.php?msg=les mails ne correspondent pas');
+    header('location: /index.php?msg=les mails ne correspondent pas');
     exit;
 }
 if(!isset($_POST['password'])||empty($_POST['password'])) {
-    header('location: index.php?msg=vous devez mettre un mot de passe');
+    header('location: /index.php?msg=vous devez mettre un mot de passe');
     exit;
 }
 if($_POST['password'] != $_POST['password2']) {
-    header('location: index.php?msg=les mot de passe ne correspondent pas');
+    header('location: /index.php?msg=les mot de passe ne correspondent pas');
     exit;
 }
 $passWord  = hash('sha256', $_POST['password']);
@@ -73,6 +73,6 @@ $req->execute([
     "val3" => $passWord,
    // "val4" => $way_image
 ]);
-header('location: index.php?msg=le fichier est trop lourd');
+header('location: /index.php?msg=le fichier est trop lourd');
 exit;
 ?>
