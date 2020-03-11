@@ -54,13 +54,15 @@ $filename = 'image-' . $timeStamp . '.' . $extension;
 $way_image = $path . '/' . $filename;
 //
 move_uploaded_file($_FILES['image']['tmp_name'], $chemin_image);// tmp_name est la position temporaire ou est stocker le fichier avec d'être stocker à sa place définitive.
-$q = 'INSERT INTO pokemon(nom, pv, attaque, defense, vitesse, image) VALUE (:val1,:val2,:val3,:val4)';
+$q = 'INSERT INTO pokemon(nom, pv, attaque, defense, vitesse, image) VALUE (:val1,:val2,:val3,:val4,:val5)';
 $req = $bdd -> prepare($q);
 $req->execute([
-    "val1" => $_POST['pseudo'],
-	"val2" => $_POST['email'],
-    "val3" => $passWord,
-    "val4" => $way_image
+    "val1" => $_POST['nom'],
+    "val2" => $_POST['pv'],
+    "val3" => $_POST['attaque'],
+    "val4" => $_POST['defense'],
+    "val5" => $_POST['vitesse']//,
+    //"val6" => $way_image
 ]);
 //header('location: index.php?msg=le fichier est trop lourd');
 //exit;
