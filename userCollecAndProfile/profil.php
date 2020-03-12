@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html>
-<?php include('includes/head.php'); ?>
+<?php include('../includes/head.php'); ?>
 
 <body>
-    <?php include('includes/header.php'); ?>
+    <?php include('../includes/header.php'); ?>
     <main>
         <h1>Mon Compte</h1>
         <br>
@@ -20,7 +20,7 @@
         <?php } ?>
 
     </main>
-    <?php include('includes/footer.php'); ?>
+    <?php include('../includes/footer.php'); ?>
 </body>
 
 </html>

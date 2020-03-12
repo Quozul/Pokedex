@@ -6,7 +6,7 @@
 <body>
 
     <?php
-    include('header.php');
+    include('includes/header.php');
     ?>
     <main>
         <?php
