@@ -3,7 +3,7 @@ CREATE DATABASE IF NOT EXISTS pokedex;
 USE pokedex;
 
 CREATE TABLE pokemon(
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     nom VARCHAR(128),
     pv INTEGER,
     attaque INTEGER,
@@ -14,7 +14,7 @@ CREATE TABLE pokemon(
 );
 
 CREATE TABLE user(
-    id INTEGER PRIMARY KEY,
+    id INTEGER PRIMARY KEY AUTO_INCREMENT,
     pseudo VARCHAR(60),
     email VARCHAR(128),
     password VARCHAR(128),
