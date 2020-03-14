@@ -1,9 +1,10 @@
 <?php
 try {
-	$bdd = new PDO('mysql:host=localhost:3307;dbname=pokedex', 'root', 'root', [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
+    $pdo = new PDO('mysql:host=localhost:3306;dbname=pokedex', 'root', 'root');
+    $pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+    $pdo->setAttribute(PDO::ATTR_EMULATE_PREPARES, false);
 } catch (Exception $e) {
-	die('Erreur : ' . $e->getMessage());
+    echo 'Database error!';
 }
-if (session_status() == PHP_SESSION_NONE) {
-	session_start();
-}
+
+session_start();

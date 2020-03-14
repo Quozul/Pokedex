@@ -1,20 +1,18 @@
-<?php include('includes/config.php'); ?>
-<!doctype html>
+<!DOCTYPE html>
 <html>
-
 <?php include('includes/head.php'); ?>
 
 <body>
 
-    <?php
-    include('includes/header.php');
-    ?>
+    <?php include('includes/header.php'); ?>
+
     <main>
-        <p>Acceuil</p>
+        <img src="/assets/pikachu.png" id="main-image">
+        <h1>Bienvenue sur le pokedex de l'ESGI !</h1>
     </main>
-    <?php
-    include('includes/footer.php');
-    ?>
+
+    <?php include('includes/footer.php'); ?>
+
 </body>
 
 </html>
