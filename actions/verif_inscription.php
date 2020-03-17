@@ -29,7 +29,7 @@ if ($_POST['password'] !== $_POST['confirm-password']) {
 // verify password length
 $pass_len = strlen($_POST['password']);
 if (8 > $pass_len || !preg_match('/(?=.*\d)(?=.*[a-z])(?=.*[A-Z])/', $_POST['password'])) {
-    header("location: /connexion.php?msg=Le mot de passe n'est pas valide");
+    header("location: /connexion.php?msg=Le mot de passe doit contenir un chiffre, une minuscule , une majuscule et faire 8 caractère au moins");
     exit;
 }
 
